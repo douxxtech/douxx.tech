@@ -1,0 +1,7 @@
+Douxx's Website
+
+Hey ! Welcome to my website.. in your terminal...
+
+Well, anyways ! I'm a 16 year old swiss student in computer science at neuchâtel vocational training center. I code cool things in my free time, most of them are open source.
+
+Contact me at douxx@douxx.tech or on other socials that you will find on https://douxx.tech (use a browser this time!).
