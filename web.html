@@ -73,6 +73,11 @@
             </div>
         </section>
     </main>
+    <script>
+        fetch('https://track.dpip.lol/?id=douxxtech').then(res => res.json()).then(res => {
+            console.log(`You're the visitor n°${res.unique_views}, with a total of ${res.total_requests} requests.`);
+        });
+    </script>
 </body>
 
 </html>
