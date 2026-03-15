@@ -65,6 +65,12 @@ header h1 {
 	color: var(--secondary-color);
 }
 
+hr {
+	border: none;
+	border-top: 1px solid rgba(220, 220, 220, 0.1);
+	margin: 2rem 0;
+}
+
 .link-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -87,7 +93,8 @@ header h1 {
 	padding-left: 1.5em;
 }
 
-.link-col a::before { /* thanks, https://arogus.com/ */
+.link-col a::before {
+	/* thanks, https://arogus.com/ */
 	content: '>';
 	position: absolute;
 	left: 0;
@@ -104,6 +111,26 @@ header h1 {
 .link-col a:hover {
 	color: var(--secondary-color);
 }
+
+.asm-note {
+	display: block;
+	max-width: 100%;
+	margin-top: 0.5rem;
+}
+
+.asm-note .link-col {
+	width: 100%;
+}
+
+.asm-note .link-col a {
+	font-size: 0.72rem;
+	color: rgba(220, 220, 220, 0.4);
+}
+
+.asm-note .link-col a:hover {
+	color: var(--secondary-color);
+}
+
 
 @media (max-width: 768px) {
 	body {
