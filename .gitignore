@@ -1,0 +1,8 @@
+*
+!/.gitignore
+
+!/assets/
+!/assets/**
+!/index.html
+!/LICENSE.txt
+!/README.md
