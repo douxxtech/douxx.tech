@@ -103,12 +103,18 @@ hr {
 	transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
-.link-col a:hover::before {
+.link-col a:hover::before,
+.link-col a:focus::before {
 	opacity: 1;
 	transform: translateX(0);
 }
 
 .link-col a:hover {
+	color: var(--secondary-color);
+}
+
+.link-col a:focus {
+    outline: none;
 	color: var(--secondary-color);
 }
 
@@ -127,7 +133,8 @@ hr {
 	color: rgba(220, 220, 220, 0.6);
 }
 
-.asm-note .link-col a:hover {
+.asm-note .link-col a:hover,
+.asm-note .link-col a:focus {
 	color: var(--secondary-color);
 }
 

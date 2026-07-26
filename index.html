@@ -76,7 +76,8 @@
         <hr>
         <section class="link-grid asm-note">
             <div class="link-col">
-                <a href="https://github.com/douxxtech/nasmserver" target="_blank">This site is served by a server written in
+                <a href="https://github.com/douxxtech/nasmserver" target="_blank">This site is served by a server
+                    written in
                     assembly, how fun?</a>
             </div>
         </section>
@@ -86,6 +87,33 @@
             console.log(`You're the visitor n°${res.unique_views}, with a total of ${res.total_requests} requests.`);
         });
         // see dpip.lol/privacy for more info
+
+        // arrow key navigation between links
+        const cols = document.querySelectorAll('.link-col');
+        const grid = Array.from(cols).map(col => Array.from(col.querySelectorAll('a')));
+        // grid[colIndex][rowIndex]
+
+        let currentCol = 0, currentRow = 0;
+
+        function focusLink(col, row) {
+            if (grid[col] && grid[col][row]) {
+                grid[col][row].focus();
+                currentCol = col;
+                currentRow = row;
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const arrows = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
+            if (!arrows.includes(e.key)) return;
+
+            e.preventDefault();
+            if (e.key === 'ArrowDown') focusLink(currentCol, currentRow + 1);
+            if (e.key === 'ArrowUp') focusLink(currentCol, currentRow - 1);
+            if (e.key === 'ArrowRight') focusLink(currentCol + 1, currentRow);
+            if (e.key === 'ArrowLeft') focusLink(currentCol - 1, currentRow);
+        });
+
     </script>
 </body>
 
